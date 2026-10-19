@@ -1,0 +1,19 @@
+<section class="constitution-section section-space" id="constitucion">
+  <div class="container"><div class="row align-items-center gy-4">
+    <div class="col-lg-5"><div class="constitution-intro reveal">
+      <span class="section-kicker">CULTURA CONSTITUCIONAL</span>
+      <h2>Un artículo para recordar. <span>Un derecho para conocer.</span></h2>
+      <p>Descubre disposiciones de la Constitución Política de Colombia y conoce, de forma breve, por qué son importantes en la vida cotidiana.</p>
+      <div class="constitution-source"><i class="bi bi-book-half"></i><span>Constitución Política de Colombia de 1991</span></div>
+      <a class="source-link" [href]="officialSource" target="_blank" rel="noopener noreferrer">Consultar texto oficial <i class="bi bi-arrow-up-right"></i></a>
+    </div></div>
+    <div class="col-lg-7"><article class="constitution-card reveal delay-1" aria-live="polite" aria-atomic="true">
+      <div class="constitution-card-head"><span class="constitution-badge"><i class="bi bi-journal-bookmark"></i> ARTÍCULO {{ currentArticle.number }}</span><span class="constitution-label">CONSTITUCIÓN DE 1991</span></div>
+      <div class="constitution-body" [attr.data-article]="currentArticle.number">
+        <span class="article-theme">{{ currentArticle.theme }}</span><blockquote>“{{ currentArticle.excerpt }}”</blockquote>
+        <div class="article-explanation"><span class="explanation-icon"><i class="bi bi-lightbulb"></i></span><p>{{ currentArticle.explanation }}</p></div>
+      </div>
+      <div class="constitution-card-footer"><span><i class="bi bi-arrow-repeat me-2"></i>Nuevo artículo automáticamente cada 20 segundos</span><button type="button" class="btn btn-outline-navy" (click)="showNextArticle()">Otro artículo <i class="bi bi-shuffle ms-2"></i></button></div>
+    </article><p class="constitution-disclaimer">Extractos breves y explicaciones generales con fines informativos. Verifica el texto vigente y sus modificaciones en la fuente oficial. Este contenido no constituye asesoría jurídica para un caso particular.</p></div>
+  </div></div>
+</section>

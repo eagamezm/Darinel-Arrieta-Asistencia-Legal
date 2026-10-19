@@ -1,0 +1,329 @@
+
+/* ========================================
+   SECCIÓN SOBRE DARINEL
+======================================== */
+
+.section-space {
+  padding: 6.4rem 0;
+}
+
+.about-section {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.about-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-kicker {
+  display: inline-flex;
+  color: var(--gold-deep);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.19em;
+}
+
+/* ========================================
+   FOTOGRAFÍA PROFESIONAL
+======================================== */
+
+.about-visual {
+  position: relative;
+  isolation: isolate;
+  min-height: 430px;
+  height: 430px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(37, 57, 82, 0.9),
+      transparent 55%
+    ),
+    linear-gradient(145deg, #142238, #0c1727);
+
+  border: 1px solid rgba(215, 181, 109, 0.4);
+  border-radius: 14px;
+
+  box-shadow: 0 22px 55px rgba(12, 23, 39, 0.13);
+}
+
+/* Halo decorativo */
+.about-portrait-glow {
+  position: absolute;
+  z-index: -1;
+  top: 35px;
+  left: 50%;
+  width: 270px;
+  height: 270px;
+  transform: translateX(-50%);
+
+  border: 1px solid rgba(215, 181, 109, 0.3);
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 22px rgba(215, 181, 109, 0.035),
+    0 0 0 45px rgba(215, 181, 109, 0.025);
+}
+
+/* Retrato */
+.about-portrait {
+  position: relative;
+  z-index: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center bottom;
+
+  transition: transform 0.5s ease;
+}
+
+.about-visual:hover .about-portrait {
+  transform: scale(1.025);
+}
+
+/* Texto inferior */
+.about-visual-caption {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+
+  padding: 25px 10px 15px;
+
+  color: #e4c477;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: center;
+
+  background: linear-gradient(
+    to top,
+    rgba(12, 23, 39, 0.98),
+    rgba(12, 23, 39, 0.55) 65%,
+    transparent
+  );
+}
+
+.caption-line {
+  display: block;
+  width: 16px;
+  height: 1px;
+  flex-shrink: 0;
+  background: rgba(215, 181, 109, 0.8);
+}
+
+/* Distintivo */
+.about-photo-badge {
+  position: absolute;
+  z-index: 3;
+  top: 18px;
+  left: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  padding: 0.7rem 0.85rem;
+
+  color: #ffffff;
+  background: rgba(12, 23, 39, 0.88);
+  border: 1px solid rgba(215, 181, 109, 0.3);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.about-photo-badge > i {
+  color: #d7b56d;
+  font-size: 1.4rem;
+}
+
+.about-photo-badge div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.about-photo-badge strong {
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.about-photo-badge small {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.66rem;
+}
+
+/* ========================================
+   TEXTO DE PRESENTACIÓN
+======================================== */
+
+.about-copy {
+  padding-left: 0.5rem;
+}
+
+.about-copy h2 {
+  margin: 1rem 0;
+
+  color: var(--navy);
+  font-size: clamp(2.1rem, 3.6vw, 3.15rem);
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  line-height: 1.14;
+}
+
+.about-copy h2 span {
+  color: var(--gold-deep);
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.about-copy p {
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.85;
+  margin-bottom: 1rem;
+}
+
+/* ========================================
+   VALORES PROFESIONALES
+======================================== */
+
+.about-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.2rem;
+  margin: 1.4rem 0;
+}
+
+.about-value {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  color: var(--navy);
+  font-size: 0.87rem;
+  font-weight: 650;
+}
+
+.about-value i {
+  color: var(--gold-deep);
+  font-size: 1rem;
+}
+
+/* ========================================
+   BOTÓN DE CONTACTO
+======================================== */
+
+.btn {
+  border-radius: 6px;
+  font-weight: 600;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.btn-navy {
+  color: #ffffff;
+  background: var(--navy);
+  border: 1px solid var(--navy);
+}
+
+.btn-navy:hover,
+.btn-navy:focus {
+  color: #ffffff;
+  background: var(--navy-soft);
+  border-color: var(--navy-soft);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(12, 23, 39, 0.15);
+}
+
+.about-contact-btn {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 991.98px) {
+  .section-space {
+    padding: 5rem 0;
+  }
+
+  .about-visual {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .about-copy {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-space {
+    padding: 4.2rem 0;
+  }
+
+  .about-visual {
+    height: 340px;
+    min-height: 340px;
+    border-radius: 12px;
+  }
+
+  .about-portrait-glow {
+    top: 28px;
+    width: 220px;
+    height: 220px;
+  }
+
+  .about-photo-badge {
+    top: 12px;
+    left: 12px;
+    padding: 0.55rem 0.65rem;
+  }
+
+  .about-visual-caption {
+    gap: 0.35rem;
+    font-size: 0.54rem;
+    letter-spacing: 0.07em;
+  }
+
+  .caption-line {
+    width: 10px;
+  }
+
+  .about-copy h2 {
+    font-size: 2.15rem;
+  }
+
+  .about-values {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .about-contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
